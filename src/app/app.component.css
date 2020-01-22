@@ -1,0 +1,22 @@
+.row {
+    margin-top : 10px;
+}
+
+#formulaire {
+    padding : 10px;
+    background-color: rgb(201, 222, 247);
+    border-radius : 5px;
+    box-shadow: 5px 5px 10px lightgray;
+}
+
+.title {
+    font-weight: bold;
+}
+
+input {
+    width : 100%;
+}
+
+#submit {
+    text-align : right;
+}

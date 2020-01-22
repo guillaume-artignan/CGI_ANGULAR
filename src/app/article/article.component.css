@@ -1,0 +1,18 @@
+.article {
+    border : 1px solid;
+}
+
+.points {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: lightgray;
+}
+
+h4 {
+    color : gray;
+    font-size:12px;
+}
