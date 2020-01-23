@@ -1,14 +1,11 @@
 
 
+
 <div class="container">
   <div class="row">
     <div class="col">
       <ol>
-        <li (click)="select()" >Albert Einstein</li>
-        <li>Mickael Faraday</li>
-        <li>Pierre Curie</li>
-        <li>Marie Curie</li>
-        <li>Nikola Tesla</li>
+        <li (click)="select(p)" *ngFor="let p of personnes" >{{p.prenom}} {{p.nom}}</li>   
       </ol>
     </div>
   </div> 
@@ -40,6 +37,8 @@
     </div>
     <div class="col-md-3">
         <input [(ngModel)]="personne.nom" />
+        <p *ngIf="!personne.nom" >Attention le nom est vide</p>
+        <p *ngIf="personne.nom=='Guillaume'" >Attention le nom est trop beau</p>
     </div>
     <div class="col-md-3">
       <b>Prenom : </b> 
@@ -75,7 +74,11 @@
           <option value="Paris">Paris</option>
       </select>
       {{ville}}
- </div>
+    </div>
+    <div class="col-md-3">
+        <span [ngClass]="{active : ville=='Sete'}">La ville sélectionnée est cool</span>
+        <span [ngClass]="{active : estCool()}">La ville sélectionnée est cool</span>
+    </div>
     
   </div>
 </div>
