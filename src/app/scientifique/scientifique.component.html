@@ -5,7 +5,7 @@
   <div class="row">
     <div class="col">
       <ol>
-        <li (click)="select(p)" *ngFor="let p of personnes" >{{p.prenom}} {{p.nom}}</li>   
+        <li [ngClass]="{selected : p==personne}" (click)="select(p)" *ngFor="let p of personnes" >{{p.prenom}} {{p.nom}}</li>   
       </ol>
     </div>
   </div> 

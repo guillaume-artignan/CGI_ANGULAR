@@ -19,3 +19,7 @@ textarea {
 .active {
     color : red;
 }
+
+.selected{
+    color : indianred;
+}
