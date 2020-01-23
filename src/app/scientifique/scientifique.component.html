@@ -19,6 +19,53 @@
     <div class="col-12"><b>Découverte :</b> {{personne.decouverte}}</div>
     <div class="col-12"><b>Description :</b> {{personne.description}}</div>
   </div>
+  <div class="row">
+    <div class="col"><h2>Modification</h2></div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+        <b>Nom : </b> 
+    </div>
+    <div class="col-md-3">
+        <input [(ngModel)]="personne.nom" />
+    </div>
+    <div class="col-md-3">
+      <b>Prenom : </b> 
+    </div>
+    <div class="col-md-3">
+        <input [(ngModel)]="personne.prenom" />
+    </div>
+    <div class="col-md-3">
+      <b>Découverte : </b> 
+    </div>
+    <div class="col-md-3">
+        <input [(ngModel)]="personne.decouverte" />
+    </div>
+    <div class="col-12">
+      <b>Description : </b> 
+    </div>
+    <div class="col-12">
+        <textarea [(ngModel)]="personne.description" ></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col"><h2>Test</h2></div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+         <input type="checkbox" [(ngModel)]="toto" />
+         {{toto}}
+    </div>
+    <div class="col-md-3">
+      <select [(ngModel)]="ville" >
+          <option value="Sete">Sète</option>
+          <option value="Lyon">Lyon</option>
+          <option value="Paris">Paris</option>
+      </select>
+      {{ville}}
+ </div>
+    
+  </div>
 </div>
 
 
