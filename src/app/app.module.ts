@@ -17,6 +17,6 @@ import { CalculatriceComponent } from './calculatrice/calculatrice.component';
     BrowserModule,FormsModule
   ],
   providers: [],
-  bootstrap: [ScientifiqueComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

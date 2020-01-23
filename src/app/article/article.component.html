@@ -1,9 +1,9 @@
 <div class="article row">
-    <div class="col-3 points">2 Points</div>
+    <div class="col-3 points">{{article.vote}} Points</div>
     <div class="col-9 lien">
-        <h3>Titre</h3>
-        <h4>Domain</h4>
-        <button class="btn btn-link">Up Vote</button>
-        <button class="btn btn-link">Down Vote</button>
+        <h3>{{article.titre}}</h3>
+        <h4>{{article.url}}</h4>
+        <button (click)="votePour()" class="btn btn-link">Up Vote</button>
+        <button (click)="voteContre()" class="btn btn-link">Down Vote</button>
     </div>
 </div>

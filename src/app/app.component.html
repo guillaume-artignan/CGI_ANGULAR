@@ -4,15 +4,15 @@
   </div>   
   <div class="row">
       <div class="col-md-2 title">Title</div>
-      <div class="col-md-10"><input /></div>
+      <div class="col-md-10"><input [(ngModel)]="titre" /></div>
   </div>
   <div class="row">
     <div class="col-md-2 title">Link</div>
-    <div class="col-md-10"><input /></div>
+    <div class="col-md-10"><input  [(ngModel)]="lien" /></div>
   </div>
   <div class="row">
     <div id="submit" class="col">
-      <button class="btn btn-success">Ajouter</button>
+      <button (click)="ajouterArticle()" class="btn btn-success">Ajouter</button>
     </div>
   </div> 
  
@@ -20,12 +20,7 @@
 
 <div class="container">
   <div class="row">
-    <ipi-article class="col-md-4"></ipi-article>
-    <ipi-article class="col-md-4"></ipi-article>
-    <ipi-article class="col-md-4"></ipi-article>
-    <ipi-article class="col-md-4"></ipi-article>
-    <ipi-article class="col-md-4"></ipi-article>
-    <ipi-article class="col-md-4"></ipi-article>
+    <ipi-article (tropMauvais)="supprimerArticle($event)" [article]="a" *ngFor="let a of articles" class="col-md-4"></ipi-article>
   </div>
 </div>
 

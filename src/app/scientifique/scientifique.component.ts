@@ -27,6 +27,8 @@ export class ScientifiqueComponent implements OnInit {
 
   personne = this.personnes[0];
 
+  ville = "";
+
   constructor() { }
 
   ngOnInit() {
