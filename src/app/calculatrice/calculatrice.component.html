@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row resultat">
+    <div class="col">
+      {{resultat}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col"><button (click)="ajoute(7)" class="btn btn-primary">7</button></div>
+    <div class="col"><button (click)="ajoute(8)" class="btn btn-primary">8</button></div>
+    <div class="col"><button (click)="ajoute(9)" class="btn btn-primary">9</button></div>
+    <div class="col"><button (click)="ajoute('+')" class="btn btn-danger">+</button></div>
+  </div>
+  <div class="row">
+    <div class="col"><button (click)="ajoute(4)" class="btn btn-primary">5</button></div>
+    <div class="col"><button (click)="ajoute(5)" class="btn btn-primary">4</button></div>
+    <div class="col"><button (click)="ajoute(6)" class="btn btn-primary">6</button></div>
+    <div class="col"><button (click)="ajoute('-')" class="btn btn-danger">-</button></div>
+  </div>
+  <div class="row">
+    <div class="col"><button (click)="ajoute(1)" class="btn btn-primary">1</button></div>
+    <div class="col"><button (click)="ajoute(2)" class="btn btn-primary">2</button></div>
+    <div class="col"><button (click)="ajoute(3)" class="btn btn-primary">3</button></div>
+    <div class="col"><button (click)="ajoute('/')" class="btn btn-danger">/</button></div>
+  </div>
+  <div class="row">
+    <div class="col"><button (click)="ajoute('*')" class="btn btn-danger">*</button></div>
+    <div class="col"><button (click)="ajoute(0)" class="btn btn-primary">0</button></div>
+    <div class="col"><button (click)="nettoyer()" class="btn btn-warning">C</button></div>
+    <div class="col"><button (click)="egal()" class="btn btn-success">=</button></div>
+  </div>
+
+</div>
