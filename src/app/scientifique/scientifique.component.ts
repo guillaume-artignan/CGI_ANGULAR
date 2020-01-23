@@ -26,4 +26,9 @@ export class ScientifiqueComponent implements OnInit {
   ngOnInit() {
   }
 
+  
+  select(){
+      this.personne.nom +="1"; 
+  }
+
 }
