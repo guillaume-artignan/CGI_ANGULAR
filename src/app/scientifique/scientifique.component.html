@@ -4,6 +4,15 @@
 <div class="container">
   <div class="row">
     <div class="col">
+      {{compteur.donner()}}
+      <app-bouton-test></app-bouton-test>
+      <app-bouton-test></app-bouton-test>
+      <app-bouton-test></app-bouton-test>
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col">
       <ol>
         <li [ngClass]="{selected : p==personne}" (click)="select(p)" *ngFor="let p of personnes" >{{p.prenom}} {{p.nom}}</li>   
       </ol>
