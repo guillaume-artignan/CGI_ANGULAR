@@ -29,11 +29,13 @@ import { RouterComponent } from './router-component/router.component';
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule,HttpClientModule,
     RouterModule.forRoot([{"path":"scientifiques", component : ScientifiqueComponent},
+                          {"path":"scientifiques/:nom", component : ScientifiqueComponent},
                           {"path": "calculatrice", component : CalculatriceComponent},
                           {"path": "formulaire", component : FormulaireComponent},
                           {"path": "requete", component : RequeteApiComponent},
                           {"path": "article", component : AppComponent},
-                          {"path": "", component : AppComponent}])
+                          {"path": "", component : AppComponent},
+                          {"path": "accueil", redirectTo : ""}])
   ],
   exports : [RouterModule],
   providers: [CompteurService,ScientifiquesService],
