@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 import { CompteurService } from './compteur.service';
 import { ScientifiquesService } from './scientifiques.service';
@@ -12,6 +13,7 @@ import { CalculatriceComponent } from './calculatrice/calculatrice.component';
 import { FormulaireComponent } from './formulaire/formulaire.component';
 import { BoutonTestComponent } from './bouton-test/bouton-test.component';
 import { RequeteApiComponent } from './requete-api/requete-api.component';
+import { RouterComponent } from './router-component/router.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,20 @@ import { RequeteApiComponent } from './requete-api/requete-api.component';
     CalculatriceComponent,
     FormulaireComponent,
     BoutonTestComponent,
-    RequeteApiComponent
+    RequeteApiComponent,
+    RouterComponent
   ],
   imports: [
-    BrowserModule,FormsModule,ReactiveFormsModule,HttpClientModule
+    BrowserModule,FormsModule,ReactiveFormsModule,HttpClientModule,
+    RouterModule.forRoot([{"path":"scientifiques", component : ScientifiqueComponent},
+                          {"path": "calculatrice", component : CalculatriceComponent},
+                          {"path": "formulaire", component : FormulaireComponent},
+                          {"path": "requete", component : RequeteApiComponent},
+                          {"path": "article", component : AppComponent},
+                          {"path": "", component : AppComponent}])
   ],
+  exports : [RouterModule],
   providers: [CompteurService,ScientifiquesService],
-  bootstrap: [ScientifiqueComponent]
+  bootstrap: [RouterComponent]
 })
 export class AppModule { }
