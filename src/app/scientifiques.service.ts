@@ -10,9 +10,9 @@ export class ScientifiquesService {
 
   constructor(private http : HttpClient) { }
 
-  donneScientifiques() : Observable<any>{
+  donneScientifiques() : Observable<Personne[]>{
 
-    return this.http.get("http://92.222.69.104/personnes/all");
+    return this.http.get<Personne[]>("http://92.222.69.104/personnes/all");
 
     
   }

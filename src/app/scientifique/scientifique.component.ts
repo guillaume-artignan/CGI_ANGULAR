@@ -14,7 +14,7 @@ import Personne from './personne.model';
 export class ScientifiqueComponent implements OnInit {
 
   titre = "Détail sur ";
-  personnes = [];
+  personnes:Personne[] = [];
 
   personne = {};
 
@@ -23,18 +23,19 @@ export class ScientifiqueComponent implements OnInit {
   constructor(public compteur : CompteurService, 
               public data : ScientifiquesService) { 
     
-      this.data.donneScientifiques()
-          .subscribe((data)=>{this.donneesChargees(data)});
+      
       
   }
 
-  donneesChargees(data){
+  donneesChargees(data:Personne[]){
     this.personnes = data;
+    console.log(data);
     this.personne = this.personnes[0];
   }
 
   ngOnInit() {
-      
+    this.data.donneScientifiques()
+            .subscribe((data:Personne[])=>{this.donneesChargees(data)});
   }
 
   
