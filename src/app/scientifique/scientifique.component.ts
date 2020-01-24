@@ -23,8 +23,14 @@ export class ScientifiqueComponent implements OnInit {
   constructor(public compteur : CompteurService, 
               public data : ScientifiquesService) { 
     
-      this.personnes = this.data.donneScientifiques();
-      this.personne = this.personnes[0];
+      this.data.donneScientifiques()
+          .subscribe((data)=>{this.donneesChargees(data)});
+      
+  }
+
+  donneesChargees(data){
+    this.personnes = data;
+    this.personne = this.personnes[0];
   }
 
   ngOnInit() {

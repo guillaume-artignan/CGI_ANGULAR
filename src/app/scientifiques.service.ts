@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import Personne from './scientifique/personne.model'
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ScientifiquesService {
 
-  constructor() { }
+  constructor(private http : HttpClient) { }
 
-  donneScientifiques(){
-    return [new Personne("Einstein", "Albert","relativité","Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sunt cum, dolores dignissimos culpa nihil! Repellendus exercitationem facere saepe? Alias quod magnam quaerat nulla dignissimos reprehenderit quae amet magni culpa?"),
-    new Personne("Curie", "Marie","Radioactivité","Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sunt cum, dolores dignissimos culpa nihil! Repellendus exercitationem facere saepe? Alias quod magnam quaerat nulla dignissimos reprehenderit quae amet magni culpa?"),
-    new Personne("Curie", "Pierre","Radioactivité","Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sunt cum, dolores dignissimos culpa nihil! Repellendus exercitationem facere saepe? Alias quod magnam quaerat nulla dignissimos reprehenderit quae amet magni culpa?"),
-    new Personne("Faraday", "Mickael","Electro-magnétisme","Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sunt cum, dolores dignissimos culpa nihil! Repellendus exercitationem facere saepe? Alias quod magnam quaerat nulla dignissimos reprehenderit quae amet magni culpa?"),
-    new Personne("Nikola", "Tesla","Bobine Tesla","Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sunt cum, dolores dignissimos culpa nihil! Repellendus exercitationem facere saepe? Alias quod magnam quaerat nulla dignissimos reprehenderit quae amet magni culpa?")
-   ];
+  donneScientifiques() : Observable<any>{
+
+    return this.http.get("http://92.222.69.104/personnes/all");
+
+    
   }
 }
